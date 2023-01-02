@@ -57,9 +57,12 @@ class UserController extends Controller
             # code...
             $users->delete();
             return redirect('admin/user')->with('status', 'user deleted');
-        } else {
+        } elseif (!$users) {
             # code...
             return redirect('admin/user')->with('status', 'user id does not exist');
+        } else{
+            # code...
+            return redirect('admin/user')->with('status', 'user could not be deleted');
         }
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () { return view('front'); });
+Route::get('/son', function () { return view('pages.son'); });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/', function () { return view('index'); });
+Route::get('/contact', function () { return view('pages.contact'); });
+Route::get('/about', function () { return view('pages.about'); });
+Route::get('/property', function () { return view('pages.property'); });
+Route::get('/blog', function () { return view('pages.blog'); });
+
+
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/dashboard.php';

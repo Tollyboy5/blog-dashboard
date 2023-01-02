@@ -36,22 +36,22 @@
           <!-- Add icons to the links using the .nav-icon class
               with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link"  data-bs-toggle="dropdown">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Category
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview dropdown-menu">
+            <ul class="nav nav-treeview ">
               <li class="nav-item">
-                <a href="{{ url('admin/category') }}" class="nav-link dropdown-item {{ Request::is('admin/category') ? 'active':'' }}">
+                <a href="{{ url('admin/category') }}" class="nav-link  {{ Request::is('admin/category') ? 'active':'' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Category</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ url('admin/add-category') }}" class="nav-link dropdown-item {{ Request::is('admin/add-category') ? 'active':'' }}">
+                <a href="{{ url('admin/add-category') }}" class="nav-link  {{ Request::is('admin/add-category') ? 'active':'' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Category</p>
                 </a>
