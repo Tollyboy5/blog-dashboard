@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Blog\BlogController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
@@ -15,13 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () { return view('front'); });
-Route::get('/son', function () { return view('pages.son'); });
 
 Route::get('/', function () { return view('index'); });
 Route::get('/contact', function () { return view('pages.contact'); });
 Route::get('/about', function () { return view('pages.about'); });
+
 Route::get('/property', function () { return view('pages.property'); });
-Route::get('/blog', function () { return view('pages.blog'); });
+Route::get('/property-single', function () { return view('pages.property-single'); });
+
+Route::get('/blog', [BlogController::class,'index']);
+Route::get('/blog-single/{id}', [BlogController::class,'singlePost']);
+
 
 
 

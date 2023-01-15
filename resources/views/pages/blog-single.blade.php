@@ -34,7 +34,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="news-img-box">
-              <img src="assets/img/slide-3.jpg" alt="" class="img-fluid">
+              <img src="{{ asset('images/post/'.$post->image) }}" alt="" class="img-fluid">
             </div>
           </div>
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -50,7 +50,7 @@
                 </li>
                 <li class="list-inline-item">
                   <strong>Date: </strong>
-                  <span class="color-text-a">19 Apr. 2017</span>
+                  <span class="color-text-a">{{$post->updated_at}}</span>
                 </li>
               </ul>
             </div>

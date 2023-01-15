@@ -15,11 +15,12 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id');
+            $table->integer('category_id')->nullable();
             $table->string('name');
             $table->string('slug');
-            $table->mediumText('description');
-            $table->string('yt_iframe');
+            $table->mediumText('image')->nullable();
+            $table->mediumText('description')->nullable();
+            $table->string('yt_iframe')->nullable();
             $table->string('meta_title');
             $table->mediumText('meta_description');
             $table->mediumText('meta_keyword');

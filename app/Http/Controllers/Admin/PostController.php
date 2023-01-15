@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,8 +15,9 @@ class PostController extends Controller
     //
     public function index()
     {
+        $category = Category::all();
         $posts = Post::all();
-        return view('admin.post.index', compact('posts'));
+        return view('admin.post.index', compact('posts','category'));
     }
 
     public function create()
@@ -81,7 +83,7 @@ class PostController extends Controller
         $post->meta_title = $request->input('meta_title');
         $post->meta_description = $request->input('meta_description');
         $post->meta_keyword = $request->input('meta_keyword');
-        $post->navbar_status = $request->navbar_status == true ? '1' : '0';
+        $post->status = $request->navbar_status == true ? '1' : '0';
         $post->status = $request->status == true ? '1' : '0';
         $post->user_id = Auth::user()->id;
         $post->update();

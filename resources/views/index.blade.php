@@ -12,7 +12,7 @@
           <div class="row">
             <div class="col-lg-8">
               <div class="intro-body">
-                <p class="intro-title-top">Doral, Florida
+                <p class="intro-title-top">Eko, Island
                   <br> 78345
                 </p>
                 <h1 class="intro-title mb-4 ">

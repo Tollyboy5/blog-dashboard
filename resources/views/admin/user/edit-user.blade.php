@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>User</h1>
+            <h1 class="text-muted">USER</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Update User </li>
+              <li class="breadcrumb-item"><a href="{{url('admin/dashboard')}}"><span><i class='fas fa-home'></i></span> HOME</a></li>
+              <li class="breadcrumb-item active"><span><i class='far fa-edit'></i></span> UPDATE USER </li>
             </ol>
           </div>
         </div>
@@ -26,7 +26,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">User Form</h3>
+            <h3 class="card-title">Edit Form</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
